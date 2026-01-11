@@ -26,13 +26,13 @@ export default function Sidebar() {
         </button>
       </div>
 
-      <div className='p-3 rounded-full hover:bg-gray-900 cursor-pointer flex items-center gap-3 w-fit xl:w-full transition-colors'>
+      {/* <div className='p-3 rounded-full hover:bg-gray-900 cursor-pointer flex items-center gap-3 w-fit xl:w-full transition-colors'>
         <div className='w-10 h-10 bg-gray-700 rounded-full'></div>
         <div className='hidden xl:block'>
           <p className='font-bold text-sm'>User Name</p>
           <p className='text-gray-500 text-sm'>@username</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function Navbar() {
         </svg>
       </button>
       <Link href='/'>
-        <p className='font-budokan text-2xl hover:scale-105 active:scale-99 duration-500'>Boo</p>
+        <p className='font-budokan text-2xl hover:scale-105 active:scale-99 font-bold duration-500'>Boo</p>
       </Link>
       <div className='flex-grow'>
         <SearchBar />
