@@ -27,6 +27,7 @@ export default function Layout({ children }: LayoutProps) {
               </div>
             </div>
 
+            {/* Main Content Area */}
             <div className='flex flex-grow gap-x-6'>
               {/* Universe */}
               <div className='w-[25%] relative'>
@@ -40,7 +41,7 @@ export default function Layout({ children }: LayoutProps) {
 
               {/* Right Sidebar */}
               <div className='hidden lg:block w-[35%]'>
-                <div className='fixed h-screen w-fit pe-5'>
+                <div className='fixed h-screen w-[24%]'>
                   <RightSidebar />
                 </div>
               </div>

@@ -25,3 +25,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
