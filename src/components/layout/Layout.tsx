@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Sidebar from '../sidebar/Sidebar';
 import RightSidebar from '../widgets/RightSidebar';
 import Navbar from '../navbar/Navbar';
-import TrendingTags from '../widgets/TrendingTags';
+import Universe from '../widgets/Universe';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -31,17 +31,17 @@ export default function Layout({ children }: LayoutProps) {
             <div className='flex flex-grow gap-x-6'>
               {/* Universe */}
               <div className='w-[25%] relative'>
-                <div className='fixed h-screen w-[17%]'>
-                  <TrendingTags />
+                <div className='fixed h-screen w-[17%] py-4'>
+                  <Universe />
                 </div>
               </div>
 
               {/* Main Feed */}
-              <main className=' w-[50%]'>{children}</main>
+              <main className=' w-[50%] py-4'>{children}</main>
 
               {/* Right Sidebar */}
               <div className='hidden lg:block w-[35%]'>
-                <div className='fixed h-screen w-[24%]'>
+                <div className='fixed h-screen w-[24%] py-4 overflow-y-auto no-scrollbar'>
                   <RightSidebar />
                 </div>
               </div>

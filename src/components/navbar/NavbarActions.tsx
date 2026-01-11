@@ -1,7 +1,7 @@
 import React from 'react';
 import NotifButton from '../widgets/NotifButton';
 import CoinButton from '../widgets/CoinButton';
-import ProfileButton from '../widgets/ProfileButton';
+import ProfileButton from './ProfileButton';
 
 export default function NavbarActions() {
   return (

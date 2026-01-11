@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SearchBar from '../widgets/SearchBar';
+import SearchBar from './SearchBar';
 import NavbarActions from './NavbarActions';
 import ButtonBurger from '../ui/ButtonBurger';
 

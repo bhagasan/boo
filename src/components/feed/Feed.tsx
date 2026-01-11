@@ -42,7 +42,7 @@ export default function Feed() {
 
   return (
     <div className='flex flex-col min-h-screen'>
-      <div className='flex flex-col'>
+      <div className='flex flex-col gap-y-6'>
         {posts.map((post) => (
           <Post key={post.id} {...post} />
         ))}
