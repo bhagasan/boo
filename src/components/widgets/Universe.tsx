@@ -1,36 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../ui/Card';
 
 export default function Universe() {
-  const tags = [
-    { name: '#Music', posts: '1.2M' },
-    { name: '#Sports', posts: '850K' },
-    { name: '#Tech', posts: '650K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-    { name: '#Music', posts: '1.2M' },
-    { name: '#Sports', posts: '850K' },
-    { name: '#Tech', posts: '650K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-    { name: '#Music', posts: '1.2M' },
-    { name: '#Sports', posts: '850K' },
-    { name: '#Tech', posts: '650K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-    { name: '#Music', posts: '1.2M' },
-    { name: '#Sports', posts: '850K' },
-    { name: '#Tech', posts: '650K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-    { name: '#Music', posts: '1.2M' },
-    { name: '#Sports', posts: '850K' },
-    { name: '#Tech', posts: '650K' },
-    { name: '#Art', posts: '420K' },
-    { name: '#Food', posts: '320K' },
-  ];
+  const [tags, setTags] = useState<Array<{ name: string; posts: number }>>([]);
+
+  useEffect(() => {
+    fetch('/api/tags')
+      .then((res) => res.json())
+      .then((data) => setTags(data))
+      .catch((error) => console.error('Error fetching tags:', error));
+  }, []);
 
   return (
     <Card>

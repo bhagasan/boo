@@ -11,7 +11,7 @@ interface PostProps {
     replies: number;
     reposts: number;
     likes: number;
-    views: string | number;
+    stars: string | number;
   };
 }
 
@@ -68,7 +68,7 @@ export default function Post({ name, handle, time, content, image, stats }: Post
               <ButtonAction icon={Heart} count={stats.likes} colorClass='text-pink-600' />
               <ButtonAction icon={MessageCircle} count={stats.replies} colorClass='text-blue-400' />
               <ButtonAction icon={Repeat} count={stats.reposts} colorClass='text-green-400' />
-              <ButtonAction icon={Star} count={stats.views} colorClass='text-yellow-400' />
+              <ButtonAction icon={Star} count={stats.stars} colorClass='text-yellow-400' />
             </div>
           </div>
         </div>

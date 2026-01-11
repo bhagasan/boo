@@ -1,44 +1,30 @@
+import React, { useState, useEffect } from 'react';
 import Post from './Post';
 
+interface PostType {
+  id: string | number;
+  name: string;
+  handle: string;
+  time: string;
+  content: string;
+  stats: {
+    replies: number;
+    reposts: number;
+    likes: number;
+    stars: string | number;
+  };
+  [key: string]: string | number | boolean | object;
+}
+
 export default function Feed() {
-  // Placeholder data
-  const posts = [
-    {
-      id: 1,
-      name: 'Elon Musk',
-      handle: 'elonmusk',
-      time: '12h',
-      content: 'True',
-      image:
-        'https://images.unsplash.com/photo-1541185933-710f50b77e7d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9ja2V0fGVufDB8fDB8fHww',
-      stats: { replies: 532, reposts: 1200, likes: 50000, views: '1.2M' },
-    },
-    {
-      id: 2,
-      name: 'Vercel',
-      handle: 'vercel',
-      time: '2h',
-      content: 'Next.js 14 is now available! 🚀\n\nExperience simpler logic, faster iterations, and less boilerplate.',
-      stats: { replies: 42, reposts: 156, likes: 2300, views: '50k' },
-    },
-    {
-      id: 3,
-      name: 'Tailwind CSS',
-      handle: 'tailwindcss',
-      time: '5h',
-      content: 'Just shipped a new update to Tailwind CSS IntelliSense. Check it out!',
-      stats: { replies: 12, reposts: 89, likes: 1200, views: '20k' },
-    },
-    {
-      id: 4,
-      name: 'React',
-      handle: 'reactjs',
-      time: '1d',
-      content:
-        'React can be used as a little bit of script in an existing HTML page, or as a full-blown framework for your next big app.',
-      stats: { replies: 120, reposts: 400, likes: 12000, views: '400k' },
-    },
-  ];
+  const [posts, setPosts] = useState<PostType[]>([]);
+
+  useEffect(() => {
+    fetch('/api/posts')
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+      .catch((error) => console.error('Error fetching posts:', error));
+  }, []);
 
   return (
     <div className='flex flex-col min-h-screen'>
