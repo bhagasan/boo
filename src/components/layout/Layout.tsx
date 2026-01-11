@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Sidebar from '../sidebar/Sidebar';
 import RightSidebar from '../widgets/RightSidebar';
 import Navbar from '../navbar/Navbar';
+import TrendingTags from '../widgets/TrendingTags';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,24 +18,31 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <div className='min-h-screen bg-black text-white pt-16'>
         <Navbar />
-        <div className='xl:px-30 max-w-7xl'>
-          <div className='grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 min-h-screen'>
+        <div className='xl:px-4 md:px-8 lg:px-16'>
+          <div className='flex min-h-screen'>
             {/* Left Sidebar */}
-            <div className='col-span-1 border-r border-gray-800 hidden md:flex justify-end pr-2 xl:pr-6'>
+            <div className='w-[236px] hidden md:flex pr-2 xl:pr-6'>
               <div className='fixed h-screen overflow-y-auto no-scrollbar w-fit xl:w-[275px]'>
                 <Sidebar />
               </div>
             </div>
 
-            {/* Main Feed */}
-            <main className='col-span-4 md:col-span-3 lg:col-span-2 border-r border-gray-800 w-full max-w-[600px] mx-auto lg:mx-0'>
-              {children}
-            </main>
+            <div className='flex flex-grow gap-x-6'>
+              {/* Universe */}
+              <div className='w-[25%] relative'>
+                <div className='fixed h-screen w-[17%]'>
+                  <TrendingTags />
+                </div>
+              </div>
 
-            {/* Right Sidebar */}
-            <div className='col-span-1 hidden lg:block'>
-              <div className='fixed h-screen w-fit pe-5'>
-                <RightSidebar />
+              {/* Main Feed */}
+              <main className=' w-[50%]'>{children}</main>
+
+              {/* Right Sidebar */}
+              <div className='hidden lg:block w-[35%]'>
+                <div className='fixed h-screen w-fit pe-5'>
+                  <RightSidebar />
+                </div>
               </div>
             </div>
           </div>
