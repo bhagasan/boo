@@ -15,6 +15,9 @@ const config: Config = {
       boxShadow: {
         center: '0 0 25px rgba(255,255,255,0.2)',
       },
+      fontFamily: {
+        buda: ['Buda', 'serif'],
+      },
     },
   },
   plugins: [],
