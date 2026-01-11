@@ -1,40 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+## How to run the project
 
 First, run the development server:
 
 ```bash
+npm install
+#then
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## How long you spent
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Start: 13:30:00
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+End: 17:30:00
 
-## Learn More
+## Detail
 
-To learn more about Next.js, take a look at the following resources:
+### What I completed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Profile Button Component**: Created a profile button with a dropdown menu that appears on click. Includes a chevron icon, submenu items for "Profile" (with bell icon) and "Settings" (with gear icon). Implemented outside click detection to hide the dropdown.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Trending Tags Component**: Built a TrendingTags component displaying a list of trending hashtags with post counts. Integrated it into the Layout component and made it sticky for better scrolling experience.
 
-## Deploy on Vercel
+- **Font Installation**: Attempted to install the "Budokan" font, but as it's not available on Google Fonts, installed the Buda font (a serif font) as an alternative and configured it in Tailwind CSS for use in the project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Slideshow Feature**: Implemented a slideshow in the RightSidebar component using SwiperJS. Created multiple slides with autoplay, loop, and custom content for promotional features.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **API Integration**:
+
+  - Created API endpoints (`/api/tags` and `/api/posts`) to serve data dynamically.
+  - Updated Universe component to fetch tags from the API.
+  - Updated Feed component to fetch posts from the API.
+
+- **Project Structure**: Maintained a clean component-based architecture with reusable UI components (Card, Button), feed components (Post, Feed), layout components (Layout, Sidebar), and widget components (RightSidebar, TrendingTags, Universe).
+
+### What I skipped
+
+- **Mobile responsive**
+- **Post variation**
+- **Search Recommendation**
+- **Notification Sidebar**
+
+### What I’d improve with more time
+
+- **Code Splitting**: For optimize page load performance
+- **Micro Interaction**: For more smooth user experience
