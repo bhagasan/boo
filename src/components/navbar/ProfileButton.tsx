@@ -25,7 +25,7 @@ export default function ProfileButton() {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className='w-10 h-10 bg-gray-700 rounded-full flex-shrink-0'></div>
-        <p className='font-medium'>Bhagas</p>
+        <p className='font-semibold'>Bhagas</p>
         <ChevronDown className='w-4 h-4' />
       </div>
       {isOpen && (

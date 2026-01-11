@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className='fixed h-16 top-0 left-0 w-full py-5 flex items-center bg-black pe-5 ps-[1.375rem] z-30 gap-x-3 bg-primary'>
       <ButtonBurger />
       <Link href='/'>
-        <p className='font-buda text-2xl hover:scale-105 active:scale-99 font-bold duration-500'>Boo</p>
+        <p className='text-2xl hover:scale-105 active:scale-99 font-bold duration-500'>Boo</p>
       </Link>
       <div className='flex-grow'>
         <SearchBar />
