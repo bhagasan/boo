@@ -24,7 +24,7 @@ End: 17:30:00
 
 - **Profile Button Component**: Created a profile button with a dropdown menu that appears on click. Includes a chevron icon, submenu items for "Profile" (with bell icon) and "Settings" (with gear icon). Implemented outside click detection to hide the dropdown.
 
-- **Trending Tags Component**: Built a TrendingTags component displaying a list of trending hashtags with post counts. Integrated it into the Layout component and made it sticky for better scrolling experience.
+- **Universe Component**: Built a TrendingTags component displaying a list of trending hashtags with post counts. Integrated it into the Layout component and made it sticky for better scrolling experience.
 
 - **Font Installation**: Attempted to install the "Budokan" font, but as it's not available on Google Fonts, installed the Buda font (a serif font) as an alternative and configured it in Tailwind CSS for use in the project.
 
