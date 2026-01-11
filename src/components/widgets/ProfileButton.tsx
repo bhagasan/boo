@@ -21,7 +21,7 @@ export default function ProfileButton() {
   return (
     <div className='relative' ref={ref}>
       <div
-        className='flex flex-shrink-0 items-center text-white gap-x-3 cursor-pointer hover:bg-gray-800 rounded-full p-2'
+        className='flex flex-shrink-0 items-center text-white gap-x-3 cursor-pointer p-2'
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className='w-10 h-10 bg-gray-700 rounded-full flex-shrink-0'></div>
@@ -29,13 +29,13 @@ export default function ProfileButton() {
         <ChevronDown className='w-4 h-4' />
       </div>
       {isOpen && (
-        <div className='absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-10'>
+        <div className='absolute right-0 mt-1 shadow-center rounded-xl z-10 bg-black'>
           <div className='py-1'>
-            <div className='flex items-center px-4 py-2 text-sm text-white hover:bg-gray-700 cursor-pointer'>
+            <div className='flex items-center px-4 py-2 text-sm text-white cursor-pointer'>
               <User className='w-4 h-4 mr-2' />
               Profile
             </div>
-            <div className='flex items-center px-4 py-2 text-sm text-white hover:bg-gray-700 cursor-pointer'>
+            <div className='flex items-center px-4 py-2 text-sm text-white cursor-pointer'>
               <Settings className='w-4 h-4 mr-2' />
               Settings
             </div>

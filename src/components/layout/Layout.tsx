@@ -21,8 +21,8 @@ export default function Layout({ children }: LayoutProps) {
         <div className='xl:px-4 md:px-8 lg:px-16'>
           <div className='flex min-h-screen'>
             {/* Left Sidebar */}
-            <div className='w-[236px] hidden md:flex pr-2 xl:pr-6'>
-              <div className='fixed h-screen overflow-y-auto no-scrollbar w-fit xl:w-[275px]'>
+            <div className='w-[266px] flex-shrink-0 hidden md:flex pr-2 xl:pr-6'>
+              <div className='fixed h-screen overflow-y-auto no-scrollbar w-fit'>
                 <Sidebar />
               </div>
             </div>

@@ -7,7 +7,7 @@ import NotifButton from '../widgets/NotifButton';
 
 export default function Navbar() {
   return (
-    <div className='fixed h-16 top-0 left-0 w-full py-5 flex items-center pe-5 ps-[1.375rem] z-30 gap-x-3 bg-primary'>
+    <div className='fixed h-16 top-0 left-0 w-full py-5 flex items-center bg-black pe-5 ps-[1.375rem] z-30 gap-x-3 bg-primary'>
       <button className='h-7 w-7 cursor-pointer hover:scale-105 active:scale-99 duration-500 min-w-[28px]'>
         <svg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'>
           <path
@@ -27,7 +27,7 @@ export default function Navbar() {
         <SearchBar />
       </div>
       <div className='flex-shrink-0'>
-        <div className=' flex items-center gap-x-4'>
+        <div className=' flex items-center gap-x-2'>
           <NotifButton />
           <CoinButton />
           <ProfileButton />
